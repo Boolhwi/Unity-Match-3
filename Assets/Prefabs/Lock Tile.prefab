@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7064077802923905939}
   m_Layer: 0
   m_Name: Lock Tile
-  m_TagString: Breakable Tile
+  m_TagString: Lock
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

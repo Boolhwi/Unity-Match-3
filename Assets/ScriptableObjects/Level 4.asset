@@ -14,31 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   width: 7
   height: 7
-  boardLayout:
-  - x: 2
-    y: 2
-    tileKind: 3
-  - x: 3
-    y: 2
-    tileKind: 3
-  - x: 4
-    y: 2
-    tileKind: 3
-  - x: 2
-    y: 3
-    tileKind: 3
-  - x: 3
-    y: 3
-    tileKind: 3
-  - x: 4
-    y: 3
-    tileKind: 3
+  boardLayout: []
   dots:
   - {fileID: 4765085927443122389, guid: 0ccd4c888f8309043813c2cce3ce9fed, type: 3}
   - {fileID: 8788522488624672806, guid: 40c34b483bde92748a53468795861337, type: 3}
   - {fileID: 3919694088553048293, guid: dd165416975d67a4b9f0eba2fc27371d, type: 3}
   - {fileID: 5381340227441754475, guid: 9e80ab81638cd7e4a8aaa9bfc9f51e10, type: 3}
-  scoreGoals: 1c0200003804000054060000
+  scoreGoals: 78000000b4000000f0000000
   endGameRequirements:
     gameType: 0
     counterValue: 15

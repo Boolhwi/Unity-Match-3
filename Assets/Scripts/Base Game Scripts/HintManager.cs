@@ -21,10 +21,12 @@ public class HintManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        hintDelaySeconds -= Time.deltaTime;
-        if(hintDelaySeconds <= 0 && currentHint == null){
-            MarkHint();
-            hintDelaySeconds = hintDelay;
+        if(board.currentState == GameState.move){
+            hintDelaySeconds -= Time.deltaTime;
+            if(hintDelaySeconds <= 0 && currentHint == null){
+                MarkHint();
+                hintDelaySeconds = hintDelay;
+            }
         }
     }
 

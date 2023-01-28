@@ -12,13 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8fa2d489bc05268409e31afe4b9cdbfc, type: 3}
   m_Name: Level 1
   m_EditorClassIdentifier: 
-  width: 7
-  height: 7
+  width: 5
+  height: 5
   boardLayout: []
   dots:
   - {fileID: 4765085927443122389, guid: 0ccd4c888f8309043813c2cce3ce9fed, type: 3}
-  - {fileID: 5381340227441754475, guid: 9e80ab81638cd7e4a8aaa9bfc9f51e10, type: 3}
-  - {fileID: 1380047675938453925, guid: d6588060e7aab8d42a17622cf3863764, type: 3}
+  - {fileID: 8788522488624672806, guid: 40c34b483bde92748a53468795861337, type: 3}
   - {fileID: 3919694088553048293, guid: dd165416975d67a4b9f0eba2fc27371d, type: 3}
   scoreGoals: 3c00000078000000b4000000
   endGameRequirements:
@@ -27,5 +26,5 @@ MonoBehaviour:
   levelGoals:
   - numberNeeded: 5
     numberCollected: 0
-    goalSpirte: {fileID: -1885893271, guid: 2516e7eb865409449b456292e6213e0f, type: 3}
-    matchValue: Dark Green Dot
+    goalSpirte: {fileID: 1845598362, guid: 2516e7eb865409449b456292e6213e0f, type: 3}
+    matchValue: Teal Dot

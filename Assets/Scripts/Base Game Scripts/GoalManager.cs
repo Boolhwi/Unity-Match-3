@@ -47,6 +47,9 @@ public class GoalManager : MonoBehaviour
     {
         for(int i =0; i< levelGoals.Length; i++){
 
+            // 개발 중 일땐 저장이 되는 것으로 인한 차선책..
+            levelGoals[i].numberCollected = 0;
+
             GameObject goal = Instantiate(goalIntroPrefab, goalIntroParent.transform.position, Quaternion.identity);
             goal.transform.SetParent(goalIntroParent.transform, false);
 
@@ -79,11 +82,11 @@ public class GoalManager : MonoBehaviour
             if(endGameManager != null){
                 endGameManager.WinGame();
             }
-            Debug.Log("WIN");
         }
     }
 
     public void CompareGoal(string goalToCompare){
+        Debug.Log("CHECK Compare : "+ goalToCompare);
         for(int i = 0; i< levelGoals.Length; i++){
             if(goalToCompare == levelGoals[i].matchValue){
                 levelGoals[i].numberCollected++;

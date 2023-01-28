@@ -15,12 +15,12 @@ public class SoundManager : MonoBehaviour
             }
             else {
                 backgroundMusic.Play();
-                backgroundMusic.volume = 1;
+                backgroundMusic.volume = 0.2f;
             }
         }
         else {
             backgroundMusic.Play();
-            backgroundMusic.volume = 1;
+            backgroundMusic.volume = 0.2f;
         }
     }
 
@@ -30,7 +30,7 @@ public class SoundManager : MonoBehaviour
                 backgroundMusic.volume = 0;
             }
             else {
-                backgroundMusic.volume = 1;
+                backgroundMusic.volume = 0.2f;
             }
         }
     }
@@ -45,5 +45,9 @@ public class SoundManager : MonoBehaviour
                 int clipToPlay = Random.Range(0, destroyNoise.Length);
                 destroyNoise[clipToPlay].Play();
         }
+    }
+
+    public void PlayClickSound(){
+        destroyNoise[1].Play();
     }
 }

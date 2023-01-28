@@ -17,41 +17,37 @@ MonoBehaviour:
   boardLayout:
   - x: 2
     y: 2
-    tileKind: 3
+    tileKind: 2
   - x: 3
     y: 2
-    tileKind: 3
+    tileKind: 2
   - x: 4
     y: 2
-    tileKind: 3
+    tileKind: 2
   - x: 2
     y: 3
-    tileKind: 3
+    tileKind: 2
   - x: 3
     y: 3
-    tileKind: 3
+    tileKind: 2
   - x: 4
     y: 3
-    tileKind: 3
+    tileKind: 2
   dots:
   - {fileID: 4765085927443122389, guid: 0ccd4c888f8309043813c2cce3ce9fed, type: 3}
   - {fileID: 8788522488624672806, guid: 40c34b483bde92748a53468795861337, type: 3}
   - {fileID: 3919694088553048293, guid: dd165416975d67a4b9f0eba2fc27371d, type: 3}
   - {fileID: 5381340227441754475, guid: 9e80ab81638cd7e4a8aaa9bfc9f51e10, type: 3}
-  scoreGoals: 1c0200003804000054060000
+  scoreGoals: b4000000680100001c020000
   endGameRequirements:
     gameType: 0
-    counterValue: 15
+    counterValue: 20
   levelGoals:
   - numberNeeded: 5
     numberCollected: 0
-    goalSpirte: {fileID: 1845598362, guid: 2516e7eb865409449b456292e6213e0f, type: 3}
-    matchValue: Teal Dot
+    goalSpirte: {fileID: 21300000, guid: 355b14140976e9744bab6f3c40e839f0, type: 3}
+    matchValue: Lock
   - numberNeeded: 5
     numberCollected: 0
     goalSpirte: {fileID: -1885893271, guid: 2516e7eb865409449b456292e6213e0f, type: 3}
     matchValue: Dark Green Dot
-  - numberNeeded: 5
-    numberCollected: 0
-    goalSpirte: {fileID: -1630820511, guid: 2516e7eb865409449b456292e6213e0f, type: 3}
-    matchValue: Yellow Dot
