@@ -86,7 +86,6 @@ public class GoalManager : MonoBehaviour
     }
 
     public void CompareGoal(string goalToCompare){
-        Debug.Log("CHECK Compare : "+ goalToCompare);
         for(int i = 0; i< levelGoals.Length; i++){
             if(goalToCompare == levelGoals[i].matchValue){
                 levelGoals[i].numberCollected++;
