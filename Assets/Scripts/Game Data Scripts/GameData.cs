@@ -60,6 +60,10 @@ public class GameData : MonoBehaviour
         }
     }
 
+    private void OnApplicationPause(){
+        Save();
+    }
+
     private void OnApplicationQuit(){
         Save();
     }
