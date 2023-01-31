@@ -4,6 +4,9 @@ using UnityEngine;
 using System;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
+# if PLATFORM_ANDROID
+using UnityEngine.Android;
+# endif
 
 [Serializable]
 public class SaveData
@@ -20,10 +23,26 @@ public class GameData : MonoBehaviour
 
     void Awake()
     {
+        #if PLATFORM_ANDROID
+        if (!Permission.HasUserAuthorizedPermission(Permission.ExternalStorageRead))
+        {
+            Permission.RequestUserPermission(Permission.ExternalStorageRead);
+        }
+
+        if (!Permission.HasUserAuthorizedPermission(Permission.ExternalStorageWrite))
+        {
+            Permission.RequestUserPermission(Permission.ExternalStorageWrite);
+        }
+        #endif
+
         if(gameData == null){
+            Debug.Log("Assign");
             DontDestroyOnLoad(this.gameObject);
             gameData = this;
-        } else{
+        } 
+        // 처음 GameData GameObject를 제외한 나머지는 제거 중복 예외 처리
+        else if(gameData != this) {
+            Debug.Log("Destroy");
             Destroy(this.gameObject);
         }
         
