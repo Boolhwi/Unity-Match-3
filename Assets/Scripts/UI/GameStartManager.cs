@@ -23,10 +23,4 @@ public class GameStartManager : MonoBehaviour
         startPanel.SetActive(true);
         levelPanel.SetActive(false);
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

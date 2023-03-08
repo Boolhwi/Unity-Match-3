@@ -647,6 +647,7 @@ MonoBehaviour:
   levelText: {fileID: 456014679}
   level: 25
   confirmPanel: {fileID: 507128834}
+  confirmPanelBg: {fileID: 0}
 --- !u!114 &63846078
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2195,6 +2196,7 @@ MonoBehaviour:
   levelText: {fileID: 429328299}
   level: 4
   confirmPanel: {fileID: 507128834}
+  confirmPanelBg: {fileID: 517824667}
 --- !u!114 &257045635
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3577,6 +3579,7 @@ MonoBehaviour:
   levelText: {fileID: 492066503}
   level: 11
   confirmPanel: {fileID: 507128834}
+  confirmPanelBg: {fileID: 0}
 --- !u!114 &436416132
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4857,7 +4860,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &507128835
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4865,19 +4868,19 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 507128834}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1952946304}
-  m_Father: {fileID: 1742727724}
-  m_RootOrder: 2
+  m_Father: {fileID: 517824668}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.042000003, y: 0.029251253}
-  m_AnchorMax: {x: 0.95400006, y: 0.8683744}
-  m_AnchoredPosition: {x: -1.3308716, y: -2.2825928}
-  m_SizeDelta: {x: 2.0446014, y: 5.4792023}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 28.3779}
+  m_SizeDelta: {x: 458.0446, y: 647.7502}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &507128836
 MonoBehaviour:
@@ -4899,6 +4902,7 @@ MonoBehaviour:
   - {fileID: 677402789}
   highScoreText: {fileID: 136275539}
   starText: {fileID: 1128779002}
+  confirmPanelBg: {fileID: 517824667}
 --- !u!114 &507128837
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5012,6 +5016,83 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 508334453}
+  m_CullTransparentMesh: 1
+--- !u!1 &517824667
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 517824668}
+  - component: {fileID: 517824670}
+  - component: {fileID: 517824669}
+  m_Layer: 5
+  m_Name: Confirm Panel Bg
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &517824668
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 517824667}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 507128835}
+  m_Father: {fileID: 1742727724}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &517824669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 517824667}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &517824670
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 517824667}
   m_CullTransparentMesh: 1
 --- !u!1 &518120952
 GameObject:
@@ -5290,6 +5371,7 @@ MonoBehaviour:
   levelText: {fileID: 1273061014}
   level: 5
   confirmPanel: {fileID: 507128834}
+  confirmPanelBg: {fileID: 517824667}
 --- !u!114 &519990321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5462,6 +5544,7 @@ MonoBehaviour:
   levelText: {fileID: 1791786733}
   level: 13
   confirmPanel: {fileID: 507128834}
+  confirmPanelBg: {fileID: 0}
 --- !u!114 &523112187
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5620,18 +5703,18 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 528306822}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -5.203468}
-  m_LocalScale: {x: 0.562, y: 0.562, z: 0.562}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1067873570}
-  m_Father: {fileID: 1879292968}
+  m_Father: {fileID: 1797909614}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.046000004, y: 0.11925026}
-  m_AnchorMax: {x: 0.95800006, y: 0.88074976}
-  m_AnchoredPosition: {x: -111.29536, y: -20.423645}
-  m_SizeDelta: {x: 459.65787, y: 674.56604}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -385.45023}
+  m_SizeDelta: {x: 459.6578, y: 629.6849}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &531362796
 GameObject:
@@ -5853,6 +5936,7 @@ MonoBehaviour:
   levelText: {fileID: 803021220}
   level: 6
   confirmPanel: {fileID: 507128834}
+  confirmPanelBg: {fileID: 517824667}
 --- !u!114 &556988360
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6023,18 +6107,18 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 561839433}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -5.203468}
-  m_LocalScale: {x: 0.562, y: 0.562, z: 0.562}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1308210315}
-  m_Father: {fileID: 1879292968}
+  m_Father: {fileID: 1797909614}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.046000004, y: 0.11925026}
-  m_AnchorMax: {x: 0.95800006, y: 0.88074976}
-  m_AnchoredPosition: {x: -111.29536, y: -20.423645}
-  m_SizeDelta: {x: 459.65787, y: 674.56604}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -385.45023}
+  m_SizeDelta: {x: 459.6578, y: 629.6849}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &568671461
 GameObject:
@@ -6506,9 +6590,8 @@ GameObject:
   - component: {fileID: 619286285}
   - component: {fileID: 619286288}
   - component: {fileID: 619286287}
-  - component: {fileID: 619286286}
   m_Layer: 5
-  m_Name: Button
+  m_Name: Top Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6532,53 +6615,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 8, y: -83}
+  m_AnchoredPosition: {x: -1, y: -102}
   m_SizeDelta: {x: 453, y: 95}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &619286286
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 619286284}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_WrapAround: 0
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 619286287}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls: []
 --- !u!114 &619286287
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7076,7 +7115,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 50, y: 40}
-  m_SizeDelta: {x: 90, y: 90}
+  m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &637981477
 MonoBehaviour:
@@ -7517,18 +7556,18 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 693346428}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -5.203468}
-  m_LocalScale: {x: 0.562, y: 0.562, z: 0.562}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 790932828}
-  m_Father: {fileID: 1879292968}
+  m_Father: {fileID: 1797909614}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.046000004, y: 0.11925026}
-  m_AnchorMax: {x: 0.95800006, y: 0.88074976}
-  m_AnchoredPosition: {x: -111.29536, y: -20.423645}
-  m_SizeDelta: {x: 459.65787, y: 674.56604}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -385.45023}
+  m_SizeDelta: {x: 459.6578, y: 629.6849}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &693346430
 MonoBehaviour:
@@ -8740,6 +8779,7 @@ MonoBehaviour:
   levelText: {fileID: 1919251456}
   level: 1
   confirmPanel: {fileID: 507128834}
+  confirmPanelBg: {fileID: 517824667}
 --- !u!114 &763781956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10840,6 +10880,7 @@ MonoBehaviour:
   levelText: {fileID: 1363987277}
   level: 10
   confirmPanel: {fileID: 507128834}
+  confirmPanelBg: {fileID: 0}
 --- !u!114 &931802545
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11111,7 +11152,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.025818769, y: 0.41538215}
   m_AnchorMax: {x: 1, y: 0.6446179}
-  m_AnchoredPosition: {x: 0.4985962, y: 0.011287689}
+  m_AnchoredPosition: {x: 0.49865723, y: 0.011291504}
   m_SizeDelta: {x: -1.1900024, y: 0.9421997}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &955194200
@@ -11571,7 +11612,7 @@ RectTransform:
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: -50, y: 40}
-  m_SizeDelta: {x: 90, y: 90}
+  m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &995530497
 MonoBehaviour:
@@ -11715,7 +11756,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -60, y: 55}
+  m_AnchoredPosition: {x: -79, y: 55}
   m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &997930254
@@ -11762,7 +11803,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1879292967}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: LevelSelectManager, Assembly-CSharp
         m_MethodName: PageRight
         m_Mode: 1
@@ -12160,6 +12201,7 @@ MonoBehaviour:
   levelText: {fileID: 2115563607}
   level: 8
   confirmPanel: {fileID: 507128834}
+  confirmPanelBg: {fileID: 517824667}
 --- !u!114 &1012788273
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13284,6 +13326,7 @@ MonoBehaviour:
   levelText: {fileID: 2113761101}
   level: 3
   confirmPanel: {fileID: 507128834}
+  confirmPanelBg: {fileID: 517824667}
 --- !u!114 &1125598082
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13599,7 +13642,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.31632057, y: 0.061334103}
   m_AnchorMax: {x: 1, y: 0.9373342}
-  m_AnchoredPosition: {x: 0.3420105, y: 0.2692604}
+  m_AnchoredPosition: {x: 0.3420105, y: 0.2692566}
   m_SizeDelta: {x: 0.68400574, y: 0.5385437}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1142007880
@@ -13880,6 +13923,7 @@ MonoBehaviour:
   levelText: {fileID: 1005308809}
   level: 18
   confirmPanel: {fileID: 507128834}
+  confirmPanelBg: {fileID: 0}
 --- !u!114 &1175553869
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15925,6 +15969,7 @@ MonoBehaviour:
   levelText: {fileID: 831449981}
   level: 27
   confirmPanel: {fileID: 507128834}
+  confirmPanelBg: {fileID: 0}
 --- !u!114 &1352163829
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16297,6 +16342,7 @@ MonoBehaviour:
   levelText: {fileID: 797952309}
   level: 15
   confirmPanel: {fileID: 507128834}
+  confirmPanelBg: {fileID: 0}
 --- !u!114 &1383866894
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16503,7 +16549,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 60, y: 55}
+  m_AnchoredPosition: {x: 76, y: 55}
   m_SizeDelta: {x: 80, y: 80}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1401045409
@@ -16550,7 +16596,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1879292967}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: LevelSelectManager, Assembly-CSharp
         m_MethodName: PageLeft
         m_Mode: 1
@@ -16754,6 +16800,7 @@ MonoBehaviour:
   levelText: {fileID: 622043924}
   level: 21
   confirmPanel: {fileID: 507128834}
+  confirmPanelBg: {fileID: 0}
 --- !u!114 &1470257485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16914,6 +16961,7 @@ MonoBehaviour:
   levelText: {fileID: 205865359}
   level: 20
   confirmPanel: {fileID: 507128834}
+  confirmPanelBg: {fileID: 0}
 --- !u!114 &1471164731
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17533,6 +17581,7 @@ MonoBehaviour:
   levelText: {fileID: 1693626251}
   level: 16
   confirmPanel: {fileID: 507128834}
+  confirmPanelBg: {fileID: 0}
 --- !u!114 &1530317032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18001,6 +18050,7 @@ MonoBehaviour:
   levelText: {fileID: 1201599566}
   level: 14
   confirmPanel: {fileID: 507128834}
+  confirmPanelBg: {fileID: 0}
 --- !u!114 &1553154476
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18892,6 +18942,7 @@ MonoBehaviour:
   levelText: {fileID: 465461121}
   level: 22
   confirmPanel: {fileID: 507128834}
+  confirmPanelBg: {fileID: 0}
 --- !u!114 &1627683338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19052,6 +19103,7 @@ MonoBehaviour:
   levelText: {fileID: 730788342}
   level: 19
   confirmPanel: {fileID: 507128834}
+  confirmPanelBg: {fileID: 0}
 --- !u!114 &1631668127
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19809,7 +19861,7 @@ RectTransform:
   m_Children:
   - {fileID: 1852954258}
   - {fileID: 1894833196}
-  - {fileID: 507128835}
+  - {fileID: 517824668}
   - {fileID: 390610559}
   m_Father: {fileID: 0}
   m_RootOrder: 1
@@ -20115,6 +20167,7 @@ MonoBehaviour:
   levelText: {fileID: 519873558}
   level: 23
   confirmPanel: {fileID: 507128834}
+  confirmPanelBg: {fileID: 0}
 --- !u!114 &1786201172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20419,6 +20472,105 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1791786731}
+  m_CullTransparentMesh: 1
+--- !u!1 &1797909613
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1797909614}
+  - component: {fileID: 1797909617}
+  - component: {fileID: 1797909616}
+  - component: {fileID: 1797909615}
+  m_Layer: 5
+  m_Name: Level Select Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1797909614
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1797909613}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 693346429}
+  - {fileID: 561839436}
+  - {fileID: 528306825}
+  m_Father: {fileID: 1894833196}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1797909615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1797909613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9a5d1fd1a308994a945bb574b3bb455, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  panels:
+  - {fileID: 693346428}
+  - {fileID: 561839433}
+  - {fileID: 528306822}
+  currentPanel: {fileID: 0}
+  page: 0
+  currentLevel: 0
+--- !u!114 &1797909616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1797909613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1797909617
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1797909613}
   m_CullTransparentMesh: 1
 --- !u!1 &1806551771
 GameObject:
@@ -21004,6 +21156,7 @@ MonoBehaviour:
   levelText: {fileID: 2007280046}
   level: 7
   confirmPanel: {fileID: 507128834}
+  confirmPanelBg: {fileID: 517824667}
 --- !u!114 &1871724353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21110,60 +21263,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1871724350}
   m_CullTransparentMesh: 1
---- !u!1 &1879292966
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1879292968}
-  - component: {fileID: 1879292967}
-  m_Layer: 0
-  m_Name: Level Select Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1879292967
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1879292966}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9a5d1fd1a308994a945bb574b3bb455, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  panels:
-  - {fileID: 693346428}
-  - {fileID: 561839433}
-  - {fileID: 528306822}
-  currentPanel: {fileID: 0}
-  page: 0
-  currentLevel: 0
---- !u!4 &1879292968
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1879292966}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 198.03447, y: 36.341007, z: 9.2588415}
-  m_LocalScale: {x: 1.7793596, y: 1.7793596, z: 1.7793596}
-  m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 693346429}
-  - {fileID: 561839436}
-  - {fileID: 528306825}
-  m_Father: {fileID: 1894833196}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1894833195
 GameObject:
   m_ObjectHideFlags: 0
@@ -21194,7 +21293,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1879292968}
+  - {fileID: 1797909614}
   - {fileID: 997930253}
   - {fileID: 1401045408}
   - {fileID: 1806551772}
@@ -21993,7 +22092,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.1157479, y: 0.156}
   m_AnchorMax: {x: 0.84436643, y: 0.89466214}
-  m_AnchoredPosition: {x: -1.1607666, y: -1.2185974}
+  m_AnchoredPosition: {x: -1.1607666, y: -1.2185669}
   m_SizeDelta: {x: 2.0703964, y: -2.1356964}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1952946305
@@ -22100,6 +22199,7 @@ MonoBehaviour:
   levelText: {fileID: 1849511087}
   level: 17
   confirmPanel: {fileID: 507128834}
+  confirmPanelBg: {fileID: 0}
 --- !u!114 &1953286454
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22260,6 +22360,7 @@ MonoBehaviour:
   levelText: {fileID: 1142007882}
   level: 12
   confirmPanel: {fileID: 507128834}
+  confirmPanelBg: {fileID: 0}
 --- !u!114 &1954886152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23014,6 +23115,7 @@ MonoBehaviour:
   levelText: {fileID: 632126994}
   level: 9
   confirmPanel: {fileID: 507128834}
+  confirmPanelBg: {fileID: 517824667}
 --- !u!114 &2018948548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23771,6 +23873,7 @@ MonoBehaviour:
   levelText: {fileID: 1004264416}
   level: 26
   confirmPanel: {fileID: 507128834}
+  confirmPanelBg: {fileID: 0}
 --- !u!114 &2110754649
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24201,6 +24304,7 @@ MonoBehaviour:
   levelText: {fileID: 730504812}
   level: 24
   confirmPanel: {fileID: 507128834}
+  confirmPanelBg: {fileID: 0}
 --- !u!114 &2125390459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24437,6 +24541,7 @@ MonoBehaviour:
   levelText: {fileID: 107355245}
   level: 2
   confirmPanel: {fileID: 507128834}
+  confirmPanelBg: {fileID: 517824667}
 --- !u!114 &2133506224
 MonoBehaviour:
   m_ObjectHideFlags: 0

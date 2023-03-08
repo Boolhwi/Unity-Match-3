@@ -19,6 +19,9 @@ public class ConfirmPanel : MonoBehaviour
     public TextMeshProUGUI highScoreText;
     public TextMeshProUGUI starText;
 
+    
+    public GameObject confirmPanelBg;
+
     // Start is called before the first frame update
     void OnEnable()
     {
@@ -50,14 +53,8 @@ public class ConfirmPanel : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void Cancel(){
-        this.gameObject.SetActive(false);
+        confirmPanelBg.SetActive(false);
     }
 
     public void Play(){

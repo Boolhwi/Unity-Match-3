@@ -19,6 +19,7 @@ public class LevelButton : MonoBehaviour
     public TextMeshProUGUI levelText;
     public int level;
     public GameObject confirmPanel;
+    public GameObject confirmPanelBg;
 
     private GameData gameData;
 
@@ -76,6 +77,6 @@ public class LevelButton : MonoBehaviour
 
     public void ConfirmPanel(int level){
         confirmPanel.GetComponent<ConfirmPanel>().level = level;
-        confirmPanel.SetActive(true);
+        confirmPanelBg.SetActive(true);
     }
 }
