@@ -16,10 +16,17 @@ public class SaveData
     public int[] stars;
 }
 
+[Serializable]
+public class GameStateData
+{
+    public bool init;
+}
+
 public class GameData : MonoBehaviour
 {
     public static GameData gameData;
     public SaveData saveData;
+    public GameStateData gameStateData;
 
     void Awake()
     {
@@ -36,13 +43,11 @@ public class GameData : MonoBehaviour
         #endif
 
         if(gameData == null){
-            Debug.Log("Assign");
             DontDestroyOnLoad(this.gameObject);
             gameData = this;
         } 
         // 처음 GameData GameObject를 제외한 나머지는 제거 중복 예외 처리
         else if(gameData != this) {
-            Debug.Log("Destroy");
             Destroy(this.gameObject);
         }
         
@@ -59,7 +64,6 @@ public class GameData : MonoBehaviour
         data = saveData;
         formatter.Serialize(file, data);
         file.Close();
-        Debug.Log("Save");
     }
 
     public void Load(){
@@ -68,7 +72,6 @@ public class GameData : MonoBehaviour
             FileStream file = File.Open(Application.persistentDataPath + "/player.dat", FileMode.Open);
             saveData = formatter.Deserialize(file) as SaveData;
             file.Close();
-            Debug.Log("Load");
         }
         else{
             saveData = new SaveData();

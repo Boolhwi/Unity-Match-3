@@ -20,12 +20,12 @@ MonoBehaviour:
   - {fileID: 8788522488624672806, guid: 40c34b483bde92748a53468795861337, type: 3}
   - {fileID: 1380047675938453925, guid: d6588060e7aab8d42a17622cf3863764, type: 3}
   - {fileID: 3919694088553048293, guid: dd165416975d67a4b9f0eba2fc27371d, type: 3}
-  scoreGoals: 3c00000078000000b4000000
+  scoreGoals: 58020000b004000008070000
   endGameRequirements:
     gameType: 1
     counterValue: 50
   levelGoals:
-  - numberNeeded: 5
+  - numberNeeded: 15
     numberCollected: 0
     goalSpirte: {fileID: 1149857069, guid: 2516e7eb865409449b456292e6213e0f, type: 3}
     matchValue: Red Dot

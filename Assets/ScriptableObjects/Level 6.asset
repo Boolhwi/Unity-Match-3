@@ -38,16 +38,16 @@ MonoBehaviour:
   - {fileID: 8788522488624672806, guid: 40c34b483bde92748a53468795861337, type: 3}
   - {fileID: 3919694088553048293, guid: dd165416975d67a4b9f0eba2fc27371d, type: 3}
   - {fileID: 5381340227441754475, guid: 9e80ab81638cd7e4a8aaa9bfc9f51e10, type: 3}
-  scoreGoals: b4000000680100001c020000
+  scoreGoals: b00400000807000060090000
   endGameRequirements:
     gameType: 0
     counterValue: 20
   levelGoals:
-  - numberNeeded: 5
-    numberCollected: 0
+  - numberNeeded: 15
+    numberCollected: 15
     goalSpirte: {fileID: 1845598362, guid: 2516e7eb865409449b456292e6213e0f, type: 3}
     matchValue: Teal Dot
   - numberNeeded: 5
-    numberCollected: 0
+    numberCollected: 6
     goalSpirte: {fileID: 21300000, guid: 96b4c34264e86ce49aa975da2c4be89f, type: 3}
     matchValue: Concrete

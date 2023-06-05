@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8703343973661866772}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.02, y: 1.16, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -132,7 +132,7 @@ MonoBehaviour:
   adjacentMarker: {fileID: 4223410220639016495, guid: 08a4921bac3eabc45a3481804680544a, type: 3}
   rowArrow: {fileID: 1007380760504444214, guid: 7fae2e2bddfd4aa42b3db2c012894d1e, type: 3}
   columnArrow: {fileID: 513709667182414805, guid: 72d900a5cd925d74e959513c2c1203ee, type: 3}
-  colorBomb: {fileID: 2938339083491609580, guid: b11037fdc15a43f4f86f63347cb961c1, type: 3}
+  colorBomb: {fileID: 5475159641385562529, guid: fa9c290b2e8432f4ca6b2e64fece284c, type: 3}
 --- !u!95 &3313071640776055422
 Animator:
   serializedVersion: 4

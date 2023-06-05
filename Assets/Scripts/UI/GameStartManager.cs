@@ -6,12 +6,18 @@ public class GameStartManager : MonoBehaviour
 {
     public GameObject startPanel;
     public GameObject levelPanel;
+    private GameData gameData;
 
     // Start is called before the first frame update
     void Start()
     {
-        startPanel.SetActive(true);
-        levelPanel.SetActive(false);
+        GameData gameData = FindObjectOfType<GameData>();
+
+        if(gameData.gameStateData.init == true){
+            Home();
+        } else {
+            PlayGame();
+        }
     }
 
     public void PlayGame(){

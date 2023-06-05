@@ -59,7 +59,7 @@ public class EndGameManager : MonoBehaviour
     }
 
     public void DecreaseCounterValue(){
-        if(board.currentState != GameState.pause){
+        if(board.currentState != GameState.pause && board.currentState != GameState.win){
             currentCounterValue--;
             counter.text = "" + currentCounterValue;
             if(currentCounterValue <= 0){
@@ -69,20 +69,28 @@ public class EndGameManager : MonoBehaviour
     }
 
     public void WinGame(){
-        winPanel.SetActive(true);
         board.currentState = GameState.win;
-        Debug.Log("WIN");
-        currentCounterValue = 0;
-        counter.text = "" + currentCounterValue;
-        
-        FadePanelController fade = FindObjectOfType<FadePanelController>();
-        fade.GameOver();
+        StartCoroutine(EndGame(true));
     }
 
     public void LoseGame(){
-        tryAgainPanel.SetActive(true);
         board.currentState = GameState.lose;
-        Debug.Log("Lose");
+        StartCoroutine(EndGame(false));
+    }
+
+    private IEnumerator EndGame(bool state){
+
+        // 마지막으로 채워진 것에 대해서는 매칭 안되는 버그 발생
+        // 아마 내려오는 시간으로 인해 isMatched = false인 상태로 아래 조건문을 통과하는 것 같음
+        yield return new WaitForSeconds(1.0f);
+
+        if(state){
+            winPanel.SetActive(true);
+        }
+        else {
+            tryAgainPanel.SetActive(true);
+        }
+
         currentCounterValue = 0;
         counter.text = "" + currentCounterValue;
 

@@ -13,10 +13,12 @@ public class BackToSplash : MonoBehaviour
         if(gameData != null){
             gameData.saveData.isActive[board.level + 1] = true;
         }
+        gameData.gameStateData.init = false;
         SceneManager.LoadScene(sceneToLoad);
     }
 
     public void LoseOK(){      
+        gameData.gameStateData.init = false;
         SceneManager.LoadScene(sceneToLoad);
     }
 

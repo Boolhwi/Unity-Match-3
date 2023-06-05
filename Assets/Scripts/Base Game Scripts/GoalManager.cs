@@ -19,8 +19,11 @@ public class GoalManager : MonoBehaviour
     public GameObject goalGamePrefab;
     public GameObject goalIntroParent;
     public GameObject goalGameParent;
+    public List<bool> goalCompleteState = new List<bool>();
     private EndGameManager endGameManager;
     private Board board;
+    private ItemCollector itemCollector;
+    private EffectManager effectManager;
 
 
     // Start is called before the first frame update
@@ -28,6 +31,8 @@ public class GoalManager : MonoBehaviour
     {
         endGameManager = FindObjectOfType<EndGameManager>();
         board = FindObjectOfType<Board>();
+        itemCollector = FindObjectOfType<ItemCollector>();
+        effectManager = FindObjectOfType<EffectManager>();
         GetGoals();
         SetupGoals();
     }
@@ -47,7 +52,7 @@ public class GoalManager : MonoBehaviour
     {
         for(int i =0; i< levelGoals.Length; i++){
 
-            // 개발 중 일땐 저장이 되는 것으로 인한 차선책..
+            // 개발 중 저장이 되는 것으로 인한 차선책..
             levelGoals[i].numberCollected = 0;
 
             GameObject goal = Instantiate(goalIntroPrefab, goalIntroParent.transform.position, Quaternion.identity);
@@ -55,7 +60,7 @@ public class GoalManager : MonoBehaviour
 
             GoalPanel panel = goal.GetComponent<GoalPanel>();
             panel.thisSprite = levelGoals[i].goalSpirte;
-            panel.thisString = "0/"+ levelGoals[i].numberNeeded;
+            panel.thisString = levelGoals[i].numberNeeded.ToString();
 
             GameObject gameGoal = Instantiate(goalGamePrefab, goalGameParent.transform.position, Quaternion.identity);
             gameGoal.transform.SetParent(goalGameParent.transform, false);
@@ -64,20 +69,37 @@ public class GoalManager : MonoBehaviour
             currentGoals.Add(panel);
             panel.thisSprite = levelGoals[i].goalSpirte;
             panel.thisString = "0/"+ levelGoals[i].numberNeeded;
+
+            // for collecting effect
+            GameObject child = gameGoal.transform.GetChild(0).gameObject;
+            itemCollector.AddCollectItem(child.transform, levelGoals[i].matchValue);
+            effectManager.AddImageObject(child);
+            goalCompleteState.Add(false);
         }
     }
 
     public void UpdateGoals()
     {
-        int goalsCompleted = 0;
         for(int i = 0; i< levelGoals.Length; i++){
             currentGoals[i].thisText.text = levelGoals[i].numberCollected + "/" + levelGoals[i].numberNeeded;
 
             if(levelGoals[i].numberCollected >= levelGoals[i].numberNeeded){
-                goalsCompleted++;
                 currentGoals[i].thisText.text = levelGoals[i].numberNeeded + "/" + levelGoals[i].numberNeeded;
+                currentGoals[i].thisText.color = new Color(0.098f, 1.0f, 0.098f, 1.0f); 
+                goalCompleteState[i] = true;
             }
         }
+    }
+
+    public void CheckWin(){
+
+        int goalsCompleted = 0;
+        for(int i = 0; i< levelGoals.Length; i++){
+            if(levelGoals[i].numberCollected >= levelGoals[i].numberNeeded){
+                goalsCompleted++;
+            }
+        }
+
         if(goalsCompleted >= levelGoals.Length){
             if(endGameManager != null){
                 endGameManager.WinGame();
@@ -89,6 +111,10 @@ public class GoalManager : MonoBehaviour
         for(int i = 0; i< levelGoals.Length; i++){
             if(goalToCompare == levelGoals[i].matchValue){
                 levelGoals[i].numberCollected++;
+
+                
+                // 글로우 임팩트
+                // currentGoals[i].thisSprite;
             }
         }
     }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Dot : MonoBehaviour
 {
@@ -21,6 +22,7 @@ public class Dot : MonoBehaviour
     private Vector2 finalTouchPosition = Vector2.zero;
     private Vector2 tempPosition;
     private EndGameManager endGameManager;
+    private SpriteRenderer sprite;
 
     [Header("Swipe Stuff")]
     public float swipeAngle = 0;
@@ -55,7 +57,10 @@ public class Dot : MonoBehaviour
         findMatches = FindObjectOfType<FindMatches>();
         hintManager = FindObjectOfType<HintManager>();
         endGameManager = FindObjectOfType<EndGameManager>();
+        
         anim = GetComponent<Animator>();
+        sprite = GetComponent<SpriteRenderer>();
+
         shineDelay = Random.Range(3f, 6f);
         shineDelaySeconds = shineDelay;
         // targetX = (int)transform.position.x;
@@ -120,20 +125,22 @@ public class Dot : MonoBehaviour
     }
 
     void OnMouseDown() {
-        if(anim != null){
-            anim.SetBool("Touched", true);
-        }
-        if(hintManager != null){
-            hintManager.DestroyHint();
-        }
         if(board.currentState == GameState.move) {
+            if(anim != null){
+                anim.SetBool("Touched", true);
+            }
+            if(hintManager != null){
+                hintManager.DestroyHint();
+            }
+
             firstTouchPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         }
     }
 
     void OnMouseUp() {
-        anim.SetBool("Touched", false);
         if(board.currentState == GameState.move) {
+            anim.SetBool("Touched", false);
+            
             finalTouchPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             CalculateAngle();
         }
@@ -258,11 +265,12 @@ public class Dot : MonoBehaviour
                 board.currentState = GameState.move;
             }
             else {
-                if(endGameManager != null){
-                    if(endGameManager.requirements.gameType == GameType.Moves){
-                        endGameManager.DecreaseCounterValue();
-                    }
-                }
+                //해당 코드 board Cycle 쪽으로 이동. endgame 조건 체크를 전부 리필과 매칭이 종료된 후 하기 위해
+                // if(endGameManager != null){
+                //     if(endGameManager.requirements.gameType == GameType.Moves){
+                //         endGameManager.DecreaseCounterValue();
+                //     }
+                // }
                 board.DestroyMatches();
             }
             // otherDot = null;
@@ -288,9 +296,13 @@ public class Dot : MonoBehaviour
     public void MakeColorBomb() {
         if(!isColumnBomb && !isRowBomb && !isAdjacentBomb){
             isColorBomb = true;
-            GameObject color = Instantiate(colorBomb, transform.position, Quaternion.identity);
-            color.transform.parent = this.transform;
+            GameObject colorBombObj = Instantiate(colorBomb, transform.position, Quaternion.identity);
+            colorBombObj.transform.parent = this.transform;
             this.gameObject.tag = "Color";
+
+            Color color = sprite.color;
+            float newAlpha = 0.0f;
+            sprite.color = new Color(color.r, color.g, color.b, newAlpha);
         }
     }
     

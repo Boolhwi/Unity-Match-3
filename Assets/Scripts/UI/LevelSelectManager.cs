@@ -24,7 +24,7 @@ public class LevelSelectManager : MonoBehaviour
                 }
             }
         }
-        page = (int)Mathf.Floor(currentLevel/9);
+        page = (int)Mathf.Floor(currentLevel/10);
         currentPanel = panels[page];
         panels[page].SetActive(true);
     }

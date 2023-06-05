@@ -210,7 +210,6 @@ public class FindMatches : MonoBehaviour
     public void CheckBombs(MatchType matchType){
         // check player move piece
         if(board.currentDot != null){
-            // currentDot과 otherDot을 제외한 사이드 이펙트로 생성되는 것은 취급 안됨
             if(board.currentDot.isMatched && board.currentDot.tag == matchType.color){
                 board.currentDot.isMatched = false;
 
@@ -236,6 +235,19 @@ public class FindMatches : MonoBehaviour
                         otherDot.MakeColumnBomb();
                     }
                 }
+            }
+        } else {
+            MatchType typeOfMatch = board.ColumnOrRow();
+            for(int i = 0; i < currentMatches.Count; i++){
+                Dot targetDot = currentMatches[i].GetComponent<Dot>();
+                if(targetDot.tag == typeOfMatch.color){
+                    targetDot.isMatched= false;
+
+                    // 가로/세로 랜덤으로 생성
+                    if(Random.Range(0.0f,1.0f) >0.5f)targetDot.MakeRowBomb();
+                    else targetDot.MakeColumnBomb();
+                    return;
+                };
             }
         }
     }
